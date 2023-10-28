@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Dashboard.css">
+    <link rel="stylesheet" href="../nav&footer.css">
+    <script src="https://kit.fontawesome.com/2d59c4e27b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Dashboard| Decentralized
+        Perpetual Exchange | $ZOMI</title>
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <nav>
+        <div class="navbar">
+
+            <div class="navbar-logo">
+                <i class="fas fa-bars" id="hamburger" onclick="hamburgerOpen()"></i>
+                <img src="../Assets/RomiLogo.png" alt="Zomi Finance">
+                <h1 class="head1">Romi Finance</h1>
+            </div>
+            <ul class="navbar-links" id="navbarLinks">
+                <div class="navbar-links-header">
+                    <span class="navbar-logo">
+                        <img src="../Assets/RomiLogo.png" alt="Romi Finance">
+                        <h1>Romi Finance</h1>
+                    </span>
+                    <i class="fa-solid fa-x" style="color: #989ea9;" onclick="hamburgerClose()"></i>
+                </div>
+                <li><a href="../Home/Home.html">Home</a></li>
+                <li><a href="../Dashboard/Dashboard.html">Dashboard</a></li>
+                <li class="dropdown">
+                    <a href="#">NFT</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Mint</a></li>
+                        <li><a href="#">Stake NFT</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Earn/Earn.html">Earn</a></li>
+                <li><a href="#">Buy</a></li>
+                <li><a href="#">Referrals</a></li>
+                <li><a href="#">Ecosystem</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <div class="nav_btns">
+                <button class="trade-button">Trade</button>
+                <button class="wallet-button">
+                    <i class="fa-solid fa-wallet"></i>
+                    Connect Wallet
+                </button>
+                <button class="ethereum-button">
+                    <i class="fa-brands fa-ethereum"></i>
+                    <span>|</span>
+                    <i class="fas fa-ellipsis-v"></i>
+
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Earn Content -->
+    <main>
+        <div class="container">
+            <!-- Title Section   -->
+            <div class="title-block">
+                <h1>Stats</h1>
+                <img src="https://zomi.finance/static/media/ic_avalanche_24.4f4088f4.svg" alt="ethereum">
+            </div>
+            <h4 class=" head4">Ethereum Total Stats start from 06 Jan 2022.<br>
+                For detailed stats:</h4>
+
+            <div class="grid-container">
+                <!-- 1st card  -->
+                <div class="grid-card">
+                    <span class="card-title card ">Overview</span>
+                    <hr>
+                    <div class="card">
+                        <span class="cardcnt">
+                            <p>AUM</p>
+                            <p>
+                                $34</p>
+                        </span>
+                        <span class="cardcnt">
+                            <p>$ZLP Pool</p>
+                            <p> $34</p>
+                        </span>
+                        <span class="cardcnt">
+                            <p>24h Volume</p>
+                            <p>$0</p>
+                        </span>
+                        <span class="cardcnt">
+                            <p>Long Positions</p>
+                            <p>$0</p>
+                        </span>
+                        <span class="cardcnt">
+                            <p>Short Positions</p>
+                            <p>$0</p>
+                        </span>
+                    </div>
+
+                </div>
+
+                <!-- 2nd Card  -->
+                <div class="grid-card">
+                    <span class="card-title card ">Total Stats</span>
+                    <hr>
+                    <div class="card">
+                        <span class="cardcnt">
+                            <p>Total Fees</p>
+                            <p>
+                                $0</p>
+                        </span>
+                        <span class="cardcnt">
+                            <p>Total Volume</p>
+                            <p>
+                                $0</p>
+                        </span>
+                        <span class="cardcnt">
+                            <p>Floor Price Fund</p>
+                            <p>
+                                $626,885</p>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Token Container  -->
+
+            <!-- Title Section   -->
+            <div class="title-block">
+                <h1>Tokens</h1>
+                <img src="https://zomi.finance/static/media/ic_avalanche_24.4f4088f4.svg" alt="ethereum">
+            </div>
+            <h4 class=" head4">Platform and $ZLP index tokens.z</h4>
+
+            <div class="grid-container">
+                <!-- 1st card  -->
+                <div class="grid-card">
+                    <div class="grid-block">
+                        <div class="block">
+                            <div class="card  ">
+                                <span class=" token-card-head ">
+                                    <img src="../Assets/hex.png" width="40px" alt="">
+                                    <p>$ZOMI</p>
+                                </span>
+                            </div>
+                            <hr>
+                            <div class="card">
+                                <span class="cardcnt">
+                                    <p>Price</p>
+                                    <p>
+                                        $0.00</p>
+                                </span>
+                                <span class="cardcnt">
+                                    <p>Supply</p>
+                                    <p> 10,000 $ZOMI</p>
+                                </span>
+                                <span class="cardcnt">
+                                    <p>Total Staked</p>
+                                    <p>$0</p>
+                                </span>
+                                <span class="cardcnt">
+                                    <p>Market Cap</p>
+                                    <p>$10</p>
+                                </span>
+
+                            </div>
+                        </div>
+                        <div class="block">
+                            <div class="chart">
+                                <canvas id="myDoughnutChart1" width="200" height="300"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2nd Card  -->
+                <div class="grid-card">
+                    <div class="grid-block">
+                        <div class="block">
+                            <div class="card  ">
+                                <span class=" token-card-head ">
+                                    <img src="../Assets/panda.png" width="40px" alt="">
+                                    <p>$ZLP</p>
+                                </span>
+                            </div>
+                            <hr>
+                            <div class="card">
+                                <span class="cardcnt">
+                                    <p>Price</p>
+                                    <p>
+                                        $0.00</p>
+                                </span>
+                                <span class="cardcnt">
+                                    <p>Supply</p>
+                                    <p> 10,000 $ZOMI</p>
+                                </span>
+                                <span class="cardcnt">
+                                    <p>Total Staked</p>
+                                    <p>$0</p>
+                                </span>
+                                <span class="cardcnt">
+                                    <p>Market Cap</p>
+                                    <p>$10</p>
+                                </span>
+
+                            </div>
+                        </div>
+                        <div class="block">
+                            <div class="chart">
+                                <canvas id="myDoughnutChart2" width="200" height="300">
+                                    Distribution
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer  -->
+    <footer>
+        <span class="navbar-logo">
+            <img src="../Assets/RomiLogo.png" alt="Romi Finance">
+            <h1>Romi Finance</h1>
+        </span>
+        <span class="footer-links">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-solid fa-m"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-telegram"></i>
+            <i class="fa-brands fa-discord"></i>
+        </span>
+        <span class="footer-subhead head4">
+            <p>Terms and Conditions</p>
+            <p>Referral Terms</p>
+            <p>Media Kit</p>
+        </span>
+    </footer>
+
+
+
+</body>
+<script src="../script.js"></script>
+
+</html>
