@@ -40,7 +40,7 @@ hr {
   border-radius: 0.4rem;
 }
 .card-title {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 400;
   color: #fff;
   margin: 0;
@@ -89,7 +89,10 @@ caption {
   border: 1px solid #4d4d4e;
   width: 100%;
 }
-
+th,
+td {
+  padding: 1.1625rem;
+}
 th {
   text-align: start;
   font-weight: 400;
@@ -151,7 +154,7 @@ th {
   }
   tbody {
     display: grid;
-    grid-template-columns: 1fr ;
+    grid-template-columns: 1fr;
     grid-gap: 1.5rem;
     margin: 1rem 0;
   }

@@ -8,6 +8,12 @@ body {
   background-color: #181818;
   color: white;
 }
+p {
+  margin: 0;
+}
+hr {
+  border: 0.5px solid #585555;
+}
 .container {
   width: 80%;
   margin: auto;
